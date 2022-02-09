@@ -15,13 +15,14 @@ public class TextData : Singleton<GameManager>
     static int textLenght = 0;
     static string defaultPath = "Assets/Text/";
     static public bool isTextEnd = true;
-    static public TypingEffect typingEffect;
+    static public DialogSystem dialog;
 
-    public static void SetText(string fileName)
+    public static void SetText(string fileName, bool autoStart = true)
     {
         //초기화
         currentTexts = new string[1];
         currentTextLenght = 0;
+        dialog.StopTyping();
 
         string filePath = defaultPath + fileName + ".txt";
         FileInfo fileInfo = new FileInfo(filePath);
@@ -33,7 +34,9 @@ public class TextData : Singleton<GameManager>
             currentTexts = value.Split('\n');
             textLenght = currentTexts.Length;
             isTextEnd = false;
-            typingEffect.UpdateDialog();
+            dialog.StopTyping();
+            if (autoStart)
+                dialog.UpdateDialog();
             reader.Close();
         }
         else
@@ -41,7 +44,7 @@ public class TextData : Singleton<GameManager>
             currentTexts[0] = "텍스트 파일 불러오기 에러 : " + fileName + ".txt";
             textLenght = 1;
             isTextEnd = false;
-            typingEffect.UpdateDialog();
+            dialog.UpdateDialog();
         }
     }
 
@@ -59,6 +62,6 @@ public class TextData : Singleton<GameManager>
 
     public static void UpdateDialog()
     {
-        typingEffect.UpdateDialog();
+        dialog.UpdateDialog();
     }
 }
