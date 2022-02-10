@@ -15,6 +15,7 @@ public class DialogSystem : MonoBehaviour
     public TextMeshProUGUI logText;
     public GameObject logBox;
     public float textSpeed = 0.15f;
+    float currentTextSpeed = 0.15f;
 
     public IEnumerator typingEft;
     private void Awake()
@@ -31,24 +32,26 @@ public class DialogSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        KeyInput();
         SetActiveUI();
     }
 
-    void KeyInput()
+    public void OnTouchArea()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (isTalking == false)
         {
-            if (isTalking == false)
-            {
-                UpdateDialog();
-            }
+            currentTextSpeed = textSpeed;
+            UpdateDialog();
+        }
+        else
+        {
+            currentTextSpeed = 0;
         }
     }
 
     public void UpdateDialog()
     {
         string str = TextData.GetText();
+
         if (TextData.isTextEnd)
             return;
 
@@ -98,7 +101,7 @@ public class DialogSystem : MonoBehaviour
             target.text = TextData.currentNpcName + text.Substring(0, i);
             if (target.text.EndsWith(' ') == false)
                 audio.Play();
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSeconds(currentTextSpeed);
         }
         UpdateLog();
         isTalking = false;
