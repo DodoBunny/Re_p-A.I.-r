@@ -8,11 +8,12 @@ public class DialogSystem : MonoBehaviour
 {
     new AudioSource audio;
     public GameObject textEndIcon;
-    public GameObject dialogBox;
 
     bool isTalking = false;
 
     public TextMeshProUGUI target;
+    public TextMeshProUGUI logText;
+    public GameObject logBox;
     public float textSpeed = 0.15f;
 
     public IEnumerator typingEft;
@@ -55,25 +56,37 @@ public class DialogSystem : MonoBehaviour
         StartCoroutine(typingEft);
     }
 
+    public void UpdateLog()
+    {
+        logText.text = TextData.GetLogText();
+    }
+
     void SetActiveUI()
     {
         if (isTalking == true)
             textEndIcon.SetActive(false);
         else
             textEndIcon.SetActive(true);
-
-        if (TextData.isTextEnd)
-        {
-            dialogBox.SetActive(false);
-            target.text = null;
-        }
-        else
-            dialogBox.SetActive(true);
     }
 
     public void StopTyping()
     {
         StopCoroutine(typingEft);
+    }
+
+    bool isLogBoxActive = false;
+    public void LogBoxOn()
+    {
+        if(isLogBoxActive == false)
+        {
+            logBox.SetActive(true);
+            isLogBoxActive = true;
+        }
+        else
+        {
+            logBox.SetActive(false);
+            isLogBoxActive = false;
+        }
     }
 
     IEnumerator _typing(string text)
@@ -82,11 +95,12 @@ public class DialogSystem : MonoBehaviour
         //yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < text.Length + 1; i++)
         {
-            target.text = text.Substring(0, i);
+            target.text = TextData.currentNpcName + text.Substring(0, i);
             if (target.text.EndsWith(' ') == false)
                 audio.Play();
             yield return new WaitForSeconds(textSpeed);
         }
+        UpdateLog();
         isTalking = false;
     }
 }
