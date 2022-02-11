@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class TextData : Singleton<GameManager>
+public class TextData : Singleton<TextData>
 {
     public TextData()
     {
