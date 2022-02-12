@@ -10,14 +10,18 @@ public class DialogSystem : MonoBehaviour
     public GameObject textEndIcon;
 
     bool isTalking = false;
+    string TalkingName;
 
     public TextMeshProUGUI target;
     public TextMeshProUGUI logText;
     public GameObject logBox;
     public float textSpeed = 0.15f;
     float currentTextSpeed = 0.15f;
-
+    string logString;
+    //CSV
+    public DialogEvent currentDialogEvent;
     public IEnumerator typingEft;
+
     private void Awake()
     {
         audio = GetComponent<AudioSource>();
@@ -35,6 +39,7 @@ public class DialogSystem : MonoBehaviour
         SetActiveUI();
     }
 
+    #region UIControll
     public void OnTouchArea()
     {
         if (isTalking == false)
@@ -48,39 +53,9 @@ public class DialogSystem : MonoBehaviour
         }
     }
 
-    public void UpdateDialog()
-    {
-        string str = TextData.GetText();
-
-        if (TextData.isTextEnd)
-            return;
-
-        typingEft = _typing(str);
-        StartCoroutine(typingEft);
-    }
-
-    public void UpdateLog()
-    {
-        logText.text = TextData.GetLogText();
-    }
-
-    void SetActiveUI()
-    {
-        if (isTalking == true)
-            textEndIcon.SetActive(false);
-        else
-            textEndIcon.SetActive(true);
-    }
-
-    public void StopTyping()
-    {
-        StopCoroutine(typingEft);
-    }
-
-    bool isLogBoxActive = false;
     public void LogBoxOn()
     {
-        if(isLogBoxActive == false)
+        if (isLogBoxActive == false)
         {
             logBox.SetActive(true);
             isLogBoxActive = true;
@@ -92,13 +67,57 @@ public class DialogSystem : MonoBehaviour
         }
     }
 
+    void SetActiveUI()
+    {
+        if (isTalking == true)
+            textEndIcon.SetActive(false);
+        else
+            textEndIcon.SetActive(true);
+    }
+    #endregion
+
+
+    public void UpdateDialog()
+    {
+        if (currentDialogEvent == null)
+            return;
+        if (currentDialogEvent.isTextEnd)
+            return;
+        if (currentDialogEvent.totalLine == currentDialogEvent.currentLine + 1)
+        {
+            currentDialogEvent.isTextEnd = true;
+            return;
+        }
+        currentDialogEvent.currentLine++;
+        Debug.Log($"{currentDialogEvent.currentLine}, {currentDialogEvent.totalLine}");
+        TalkingName = currentDialogEvent.GetCurrentName();
+        string str = currentDialogEvent.GetCurrentText();
+        typingEft = _typing(str);
+        StartCoroutine(typingEft);
+    }
+
+    public void UpdateLog()
+    {
+        logString += currentDialogEvent.GetCurrentName() + " : " + currentDialogEvent.GetCurrentText() + "\n";
+        logText.text = logString;
+    }
+
+
+    public void StopTyping()
+    {
+        StopCoroutine(typingEft);
+    }
+
+    bool isLogBoxActive = false;
+
+
     IEnumerator _typing(string text)
     {
         isTalking = true;
         //yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < text.Length + 1; i++)
         {
-            target.text = TextData.currentNpcName + text.Substring(0, i);
+            target.text = TalkingName + " : " + text.Substring(0, i);
             if (target.text.EndsWith(' ') == false)
                 audio.Play();
             yield return new WaitForSeconds(currentTextSpeed);

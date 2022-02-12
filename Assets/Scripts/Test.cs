@@ -17,10 +17,11 @@ public class Test : MonoBehaviour
 
     public void test1()
     {
-        TextData.SetText("test");
+
     }
     public void test2()
     {
-        TextData.SetText("test2");
+        TextData.SetEvent("test");
+        TextData.UpdateDialog();
     }
 }
