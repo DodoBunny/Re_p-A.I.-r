@@ -20,6 +20,7 @@ public class Repair_Btn : MonoBehaviour
 
         Repair repair = RepairSystem.repairs[btn_id];
         RepairSystem.UI_Repairs[repair] = btn_active;
+        SoundSystem.instance.PlaySoundEffect(0);
     }
 
     private void Update()

@@ -9,6 +9,12 @@ public class Test : MonoBehaviour
     {
     }
 
+    private void OnEnable()
+    {
+        TextData.SetEvent("test");
+        TextData.UpdateDialog();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +27,5 @@ public class Test : MonoBehaviour
     }
     public void test2()
     {
-        TextData.SetEvent("test");
-        TextData.UpdateDialog();
     }
 }
