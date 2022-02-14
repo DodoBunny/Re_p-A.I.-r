@@ -5,8 +5,7 @@ using UnityEngine;
 public class SoundSystem : MonoBehaviour
 {
     static public SoundSystem instance;
-
-    AudioSource audio;
+    new AudioSource audio;
 
     [SerializeField]
     public AudioClip[] clips;
