@@ -18,6 +18,8 @@ public class RepairSystem : MonoBehaviour
     [SerializeField]
     public static Dictionary<Repair, bool> UI_Repairs = new Dictionary<Repair, bool>();
 
+    public int repairCost = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,17 +39,17 @@ public class RepairSystem : MonoBehaviour
     string temp;
     private void Update()
     {
+        repairCost = 0;
         temp = "[수리계획서]\n";
-        int totalCost = 0;
         for (int i = 0; i < repairs.Count; i++)
         {
             if (UI_Repairs[repairs[i]] == true)
             {
                 temp += repairs[i].r_name + " / ";
-                totalCost += repairs[i].cost;
+                repairCost += repairs[i].cost;
             }
         }
-        temp += "\n총 수리 비용 : " + totalCost;
+        temp += "\n총 수리 비용 : " + repairCost;
         repairUI_LogText.text = temp;
     }
 
