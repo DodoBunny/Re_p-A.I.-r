@@ -3,17 +3,62 @@ using System.Collections;
 
 public class MainSystem : MonoBehaviour
 {
-    public static Character[] characters;
-    // Use this for initialization
-    void Start()
-    {
-        characters = Character.Parse("Character");
-        characters[0].SetCurrentCharacter();
+    public static MainSystem instance;
 
-        for (int i = 0; i < RepairSystem.repairs.Count; i++)
+    public Character[] characterData;
+    public Character tempCharacter;
+    public int day = 1;
+    public bool isEnd = true;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void Start()
+    {
+        tempCharacter = Instantiate(characterData[0]);
+        TextData.SetEvent("test");
+        TextData.UpdateDialog();
+    }
+
+    private void Update()
+    {
+        if (DialogSystem.instance.currentDialogEvent.isTextEnd)
+            Clear();
+
+        if (isEnd)
         {
-            bool temp = Character.currentCharacter.character_Breakdown[RepairSystem.repairs[i]];
-            Debug.Log($"{RepairSystem.repairs[i].r_name} : {temp}");
+            switch (day)
+            {
+                case 1:
+                    isEnd = false;
+                    break;
+                case 2:
+                    isEnd = false;
+                    break;
+                case 3:
+                    isEnd = false;
+                    break;
+                case 4:
+                    isEnd = false;
+                    break;
+                case 5:
+                    isEnd = false;
+                    break;
+                case 6:
+                    isEnd = false;
+                    break;
+                case 7:
+                    isEnd = false;
+                    break;
+            }
         }
+    }
+
+    void Clear()
+    {
+        day++;
+        Destroy(tempCharacter.gameObject);
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class RepairSystem : MonoBehaviour
 {
-
     public GameObject repairUI_contentObj;
     public TextMeshProUGUI repairUI_LogText;
 
@@ -19,12 +18,12 @@ public class RepairSystem : MonoBehaviour
     public static Dictionary<Repair, bool> UI_Repairs = new Dictionary<Repair, bool>();
 
     public int repairCost = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         Parse("RepairList");
-
+    }
+    void Start()
+    {
         for (int i = 0; i < repairs.Count; i++)
         {
             UI_Repairs.Add(repairs[i], false);
@@ -53,8 +52,32 @@ public class RepairSystem : MonoBehaviour
         repairUI_LogText.text = temp;
     }
 
+    public void RepairStart()
+    {
+        int needRepairCount = Character.currentCharacter.breakdownCount;
+        for (int i = 0; i < repairs.Count; i++)
+        {
+            Repair repair = repairs[i];
+            if(UI_Repairs[repair] && Character.currentCharacter.breakdownList[repair])
+            {
+                needRepairCount--;
+                Debug.Log(repairs[i].r_name + " 수리");
+            }
+        }
+
+        if (needRepairCount == 0)
+        {
+            Debug.Log("수리 성공!");
+            Character.currentCharacter.isBreakdown = false;
+        }
+
+        SoundSystem.instance.PlaySoundEffect(5);
+        SceneSystem.instance.OnScene1();
+    }
+
+
     //CSV
-    static void Parse(string _CSVFileName)
+    public static void Parse(string _CSVFileName)
     {
         TextAsset csvData = Resources.Load<TextAsset>(_CSVFileName);
 

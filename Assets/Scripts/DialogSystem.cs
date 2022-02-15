@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
+    public static DialogSystem instance;
     new AudioSource audio;
     public GameObject textEndIcon;
 
@@ -24,6 +25,7 @@ public class DialogSystem : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         audio = GetComponent<AudioSource>();
         TextData.dialog = this;
     }
@@ -89,7 +91,6 @@ public class DialogSystem : MonoBehaviour
             return;
         }
         currentDialogEvent.currentLine++;
-        Debug.Log($"{currentDialogEvent.currentLine}, {currentDialogEvent.totalLine}");
         TalkingName = currentDialogEvent.GetCurrentName();
         string str = currentDialogEvent.GetCurrentText();
         typingEft = _typing(str);

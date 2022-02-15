@@ -11,8 +11,6 @@ public class Test : MonoBehaviour
 
     private void OnEnable()
     {
-        TextData.SetEvent("test");
-        TextData.UpdateDialog();
     }
 
     // Update is called once per frame

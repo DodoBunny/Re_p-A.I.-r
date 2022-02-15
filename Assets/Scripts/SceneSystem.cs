@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSystem : MonoBehaviour
 {
+    public static SceneSystem instance;
     public GameObject Scene1;
     public GameObject Scene2;
     public Image Fade;
@@ -94,6 +95,7 @@ public class SceneSystem : MonoBehaviour
     }
     private void Awake()
     {
+        instance = this;
         StartCoroutine(FadeOut());
     }
 
