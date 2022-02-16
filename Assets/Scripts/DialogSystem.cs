@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
+    public static DialogSystem instance;
     new AudioSource audio;
     public GameObject textEndIcon;
 
@@ -24,8 +25,8 @@ public class DialogSystem : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         audio = GetComponent<AudioSource>();
-        TextData.dialog = this;
     }
 
     void Start()
@@ -36,7 +37,7 @@ public class DialogSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetActiveUI();
+        SetActiveEndIcon();
     }
 
     #region UIControll
@@ -55,52 +56,61 @@ public class DialogSystem : MonoBehaviour
 
     public void LogBoxOn()
     {
-        if (isLogBoxActive == false)
+        if (logBox.activeInHierarchy == false)
         {
             logBox.SetActive(true);
-            isLogBoxActive = true;
         }
         else
         {
             logBox.SetActive(false);
-            isLogBoxActive = false;
         }
     }
 
-    void SetActiveUI()
+    void SetActiveEndIcon()
     {
         if (isTalking == true)
             textEndIcon.SetActive(false);
         else
             textEndIcon.SetActive(true);
     }
-    #endregion
-
 
     public void UpdateDialog()
     {
         if (currentDialogEvent == null)
             return;
+
         if (currentDialogEvent.isTextEnd)
             return;
-        if (currentDialogEvent.totalLine == currentDialogEvent.currentLine + 1)
-        {
-            currentDialogEvent.isTextEnd = true;
-            return;
-        }
-        currentDialogEvent.currentLine++;
-        Debug.Log($"{currentDialogEvent.currentLine}, {currentDialogEvent.totalLine}");
+
         TalkingName = currentDialogEvent.GetCurrentName();
         string str = currentDialogEvent.GetCurrentText();
         typingEft = _typing(str);
         StartCoroutine(typingEft);
-    }
+        UpdateLog();
+        currentDialogEvent.currentLine++;
 
+        if (currentDialogEvent.totalLine == currentDialogEvent.currentLine)
+        {
+            currentDialogEvent.isTextEnd = true;
+            return;
+        }
+    }
     public void UpdateLog()
     {
+        if (currentDialogEvent.isTextEnd)
+            return;
+
         logString += currentDialogEvent.GetCurrentName() + " : " + currentDialogEvent.GetCurrentText() + "\n";
         logText.text = logString;
     }
+
+    public void ResetLog()
+    {
+        logString = string.Empty;
+    }
+    #endregion
+
+
 
 
     public void StopTyping()
@@ -108,7 +118,6 @@ public class DialogSystem : MonoBehaviour
         StopCoroutine(typingEft);
     }
 
-    bool isLogBoxActive = false;
 
 
     IEnumerator _typing(string text)
@@ -122,7 +131,40 @@ public class DialogSystem : MonoBehaviour
                 audio.Play();
             yield return new WaitForSeconds(currentTextSpeed);
         }
-        UpdateLog();
         isTalking = false;
+    }
+
+    static DialogEvent Parse(string _CSVFileName)
+    {
+        List<Dialog> dialogList = new List<Dialog>();
+        TextAsset csvData = Resources.Load<TextAsset>(_CSVFileName);
+
+        string[] data = csvData.text.Split('\n');
+
+        for (int i = 1; i < data.Length; i++)
+        {
+            string[] row = data[i].Split(',');
+
+            Dialog dialog = new Dialog();
+            dialog.name = row[1];
+            dialog.context = row[2];
+
+            dialogList.Add(dialog);
+        }
+        DialogEvent dialogEvent = new DialogEvent();
+        dialogEvent.name = _CSVFileName;
+        dialogEvent.currentLine = 0;
+        dialogEvent.totalLine = data.Length - 1;
+        dialogEvent.dialogs = dialogList.ToArray();
+
+        return dialogEvent;
+    }
+
+    public void SetEvent(string _CSVFileName)
+    {
+        ResetLog();
+        DialogEvent _event = Parse(_CSVFileName);
+        currentDialogEvent = _event;
+        UpdateDialog();
     }
 }

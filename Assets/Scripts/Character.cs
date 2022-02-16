@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public string Char_name = "test";
-    public int Char_id;
+    public static Character currentCharacter;
+    public int char_id;
+    public string char_name = "";
+    public int char_sprite;
+    public List<int> char_breakdownID = new();
+    public Dictionary<Repair, bool> breakdownList = new();
+    public int breakdownCount;
+    public bool isBreakdown = true;
 
-    [SerializeField]
-    public bool[] isBroken = new bool[RepairSystem.repairs.Count];
-
-    public Dictionary<Repair, bool> Character_Repairs = new Dictionary<Repair, bool>();
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        currentCharacter = this; 
+        SetBreakDown();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetBreakDown()
     {
-
+        for (int i = 0; i < RepairSystem.repairs.Count; i++)
+        {
+            if (char_breakdownID.Contains(i))
+            {
+                breakdownList[RepairSystem.repairs[i]] = true;
+                breakdownCount++;
+            }
+            else
+            {
+                breakdownList[RepairSystem.repairs[i]] = false;
+            }
+        }
     }
+
 }
