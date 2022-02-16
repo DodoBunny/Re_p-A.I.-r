@@ -7,9 +7,9 @@ public class MainSystem : MonoBehaviour
 
     public Character[] characterData;
     public Character tempCharacter;
-    public int day = 1;
     public bool isEnd = true;
-
+    private readonly string[] events = { "Day1", "Day2", "Day3", "Day4", "Day5", "Day6", "Day7" };
+    private int day = 0;
     private void Awake()
     {
         instance = this;
@@ -18,47 +18,17 @@ public class MainSystem : MonoBehaviour
     private void Start()
     {
         tempCharacter = Instantiate(characterData[0]);
-        TextData.SetEvent("test");
-        TextData.UpdateDialog();
+        DialogSystem.instance.SetEvent(events[day]);
+    }
+
+    public void NextEvent()
+    {
+        day++;
+        DialogSystem.instance.SetEvent(events[day]);
     }
 
     private void Update()
     {
-        if (DialogSystem.instance.currentDialogEvent.isTextEnd)
-            Clear();
 
-        if (isEnd)
-        {
-            switch (day)
-            {
-                case 1:
-                    isEnd = false;
-                    break;
-                case 2:
-                    isEnd = false;
-                    break;
-                case 3:
-                    isEnd = false;
-                    break;
-                case 4:
-                    isEnd = false;
-                    break;
-                case 5:
-                    isEnd = false;
-                    break;
-                case 6:
-                    isEnd = false;
-                    break;
-                case 7:
-                    isEnd = false;
-                    break;
-            }
-        }
-    }
-
-    void Clear()
-    {
-        day++;
-        Destroy(tempCharacter.gameObject);
     }
 }

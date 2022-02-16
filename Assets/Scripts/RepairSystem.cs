@@ -69,10 +69,14 @@ public class RepairSystem : MonoBehaviour
         {
             Debug.Log("수리 성공!");
             Character.currentCharacter.isBreakdown = false;
+            MainSystem.instance.NextEvent();
+            SceneSystem.instance.OnScene1();
         }
-
-        SoundSystem.instance.PlaySoundEffect(5);
-        SceneSystem.instance.OnScene1();
+        else
+        {
+            Debug.Log("수리 실패!");
+            SoundSystem.instance.PlaySoundEffect(5);
+        }
     }
 
 
@@ -91,19 +95,7 @@ public class RepairSystem : MonoBehaviour
 
             repair.id = int.Parse(row[0]);
             repair.r_name = row[1];
-            switch (row[2])
-            {
-                case "Hardware":
-                    repair.division = RepairDivision.Hardware;
-                    break;
-                case "SoftWare":
-                    repair.division = RepairDivision.Software;
-                    break;
-                case "Tuning":
-                    repair.division = RepairDivision.Tuning;
-                    break;
-            }
-            repair.cost = int.Parse(row[3]);
+            repair.cost = int.Parse(row[2]);
             repairs.Add(repair);
         }
     }
