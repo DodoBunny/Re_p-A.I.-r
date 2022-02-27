@@ -6,9 +6,8 @@ public class MainSystem : MonoBehaviour
     public static MainSystem instance;
 
     public Character[] characterData;
-    public Character tempCharacter;
     public bool isEnd = true;
-    private readonly string[] events = { "Day1", "Day2", "Day3", "Day4", "Day5", "Day6", "Day7" };
+    public string[] events = { "Day1", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
     private int day = 0;
     private void Awake()
     {
@@ -17,7 +16,6 @@ public class MainSystem : MonoBehaviour
 
     private void Start()
     {
-        tempCharacter = Instantiate(characterData[0]);
         DialogSystem.instance.SetEvent(events[day]);
     }
 
@@ -27,8 +25,8 @@ public class MainSystem : MonoBehaviour
         DialogSystem.instance.SetEvent(events[day]);
     }
 
-    private void Update()
+    void AddCharacter()
     {
-
+        Instantiate(characterData[0]);
     }
 }
