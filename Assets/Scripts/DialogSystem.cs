@@ -144,7 +144,6 @@ public class DialogSystem : MonoBehaviour
         for (int i = 1; i < data.Length; i++)
         {
             string[] row = data[i].Split(',');
-            Debug.Log(row[2]);
 
             Dialog dialog = new Dialog();
             dialog.name = row[1];

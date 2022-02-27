@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MainSystem : MonoBehaviour
 {
     public static MainSystem instance;
-
+    public GameObject CharPool;
     public Character[] characterData;
     public bool isEnd = true;
     public string[] events = { "Day1", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
@@ -17,6 +18,7 @@ public class MainSystem : MonoBehaviour
     private void Start()
     {
         DialogSystem.instance.SetEvent(events[day]);
+        RemoveCharacter(0);
     }
 
     public void NextEvent()
@@ -25,8 +27,18 @@ public class MainSystem : MonoBehaviour
         DialogSystem.instance.SetEvent(events[day]);
     }
 
-    void AddCharacter()
+    public void AddCharacter(int CharNum)
     {
-        Instantiate(characterData[0]);
+         Instantiate(characterData[CharNum],CharPool.transform);
+    }
+
+    public void RemoveCharacter(int CharNum)
+    {
+        Character[] characters = CharPool.GetComponentsInChildren<Character>();
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i].char_id == CharNum)
+                Destroy(characters[i].gameObject);
+        }
     }
 }
