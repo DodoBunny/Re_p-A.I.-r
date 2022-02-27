@@ -8,7 +8,7 @@ public class MainSystem : MonoBehaviour
     public GameObject CharPool;
     public Character[] characterData;
     public bool isEnd = true;
-    public string[] events = { "Day1", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
+    public string[] events = { "Day0", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
     private int day = 0;
     private void Awake()
     {
@@ -17,8 +17,8 @@ public class MainSystem : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(day);
         DialogSystem.instance.SetEvent(events[day]);
-        RemoveCharacter(0);
     }
 
     public void NextEvent()
@@ -30,6 +30,11 @@ public class MainSystem : MonoBehaviour
     public void AddCharacter(int CharNum)
     {
          Instantiate(characterData[CharNum],CharPool.transform);
+    }
+
+    public void SetRepairCharacter(int CharNum)
+    {
+        characterData[CharNum].SetCurrentCharacter();
     }
 
     public void RemoveCharacter(int CharNum)

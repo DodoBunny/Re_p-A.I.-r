@@ -15,6 +15,7 @@ public class RepairSpriteChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        image.sprite = Character.currentCharacter.sprite;
+        if(Character.currentCharacter.sprite != null)
+            image.sprite = Character.currentCharacter.sprite;
     }
 }

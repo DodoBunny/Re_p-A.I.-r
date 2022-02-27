@@ -149,6 +149,15 @@ public class DialogSystem : MonoBehaviour
             dialog.name = row[1];
             dialog.context = row[2].Replace('^',',');
 
+            //MainSystem
+            if(row[4] != "")
+            {
+                Debug.Log(row[4]);
+                MainSystem.instance.SendMessage(row[4], row[5], SendMessageOptions.DontRequireReceiver);
+            }
+
+            //
+
             dialogList.Add(dialog);
         }
         DialogEvent dialogEvent = new DialogEvent();
