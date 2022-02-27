@@ -1454,6 +1454,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+<<<<<<< Updated upstream
 ========================================================================
 Received Import Request.
   Time since last request: 4455.549285 seconds.
@@ -1779,3 +1780,5 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
 
  -> (artifact id: '19aaa4e8f8cdcc2ca1c8d4e155165927') in 0.015590 seconds 
+=======
+>>>>>>> Stashed changes

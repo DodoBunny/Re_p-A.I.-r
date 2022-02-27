@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
     {
         SetBreakDown();
     }
-    private void OnEnable()
+    public void SetCurrentCharacter()
     {
         currentCharacter = this;
     }
