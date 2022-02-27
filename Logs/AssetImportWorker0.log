@@ -15,7 +15,7 @@ E:/Unity Projects/Witch
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-10463
+1684
 Successfully changed project path to: E:/Unity Projects/Witch
 E:/Unity Projects/Witch
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ E:/Unity Projects/Witch
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 100.74 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 94.61 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.3f1 (32358a8527b4)
 [Subsystems] Discovering subsystems at path E:/Unity/2021.2.3f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,89 @@ Initialize mono
 Mono path[0] = 'E:/Unity/2021.2.3f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity/2021.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Unity/2021.2.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56496
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unity/2021.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002920 seconds.
+Registered in 0.002966 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 97.75 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 88.03 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.671 seconds
+- Completed reload, in  0.629 seconds
 Domain Reload Profiling:
-	ReloadAssembly (672ms)
-		BeginReloadAssembly (106ms)
+	ReloadAssembly (629ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (489ms)
-			LoadAssemblies (106ms)
+		EndReloadAssembly (452ms)
+			LoadAssemblies (104ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (110ms)
+			SetupTypeCache (98ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (299ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (279ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
+				RefreshPlugins (88ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (123ms)
-				ProcessInitializeOnLoadMethodAttributes (62ms)
+				ProcessInitializeOnLoadAttributes (118ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009977 seconds.
+Registered in 0.009800 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 100.01 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 89.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.802 seconds
+- Completed reload, in  1.741 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1802ms)
-		BeginReloadAssembly (209ms)
+	ReloadAssembly (1742ms)
+		BeginReloadAssembly (212ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1495ms)
-			LoadAssemblies (129ms)
+		EndReloadAssembly (1440ms)
+			LoadAssemblies (141ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (257ms)
+			SetupTypeCache (225ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (977ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (955ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (100ms)
-				BeforeProcessingInitializeOnLoad (89ms)
-				ProcessInitializeOnLoadAttributes (737ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (735ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.13 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3920 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 37 unused Assets / (55.5 KB). Loaded Objects now: 4376.
 Memory consumption went from 151.7 MB to 151.6 MB.
-Total: 3.759300 ms (FindLiveObjects: 0.498500 ms CreateObjectMapping: 0.120500 ms MarkObjects: 3.047200 ms  DeleteObjects: 0.091400 ms)
+Total: 3.430700 ms (FindLiveObjects: 0.385400 ms CreateObjectMapping: 0.112500 ms MarkObjects: 2.861300 ms  DeleteObjects: 0.070400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,91 +159,607 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 131160.406003 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised_idle.png
-  artifactKey: Guid(d5181380aa7490946abe8e53d12c3d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised_idle.png using Guid(d5181380aa7490946abe8e53d12c3d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '850a87827148b0281597e4f93f7e7b5a') in 0.208775 seconds 
+  Time since last request: 186443.094006 seconds.
+  path: Assets/Art/Character/android_assistant/Image (2) 1.controller
+  artifactKey: Guid(3755fa7bd09639e4a9cb1693bd84b069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/Image (2) 1.controller using Guid(3755fa7bd09639e4a9cb1693bd84b069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ae98b687281be2dc96b45d38ae682c6') in 0.087032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.463811 seconds.
+  path: Assets/Art/Character/android_assistant/assistant.controller
+  artifactKey: Guid(3755fa7bd09639e4a9cb1693bd84b069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/assistant.controller using Guid(3755fa7bd09639e4a9cb1693bd84b069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f5530f0467e971e198b06b6eb1b63c') in 0.006552 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010054 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.206 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1206ms)
+		BeginReloadAssembly (191ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (920ms)
+			LoadAssemblies (143ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (253ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (405ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (292ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3896 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.6 KB). Loaded Objects now: 4378.
+Memory consumption went from 149.7 MB to 149.7 MB.
+Total: 3.362300 ms (FindLiveObjects: 0.379400 ms CreateObjectMapping: 0.105100 ms MarkObjects: 2.854800 ms  DeleteObjects: 0.021600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011087 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.161 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1162ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (886ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (237ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (391ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (279ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3896 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.6 KB). Loaded Objects now: 4380.
+Memory consumption went from 149.7 MB to 149.7 MB.
+Total: 3.233100 ms (FindLiveObjects: 0.376300 ms CreateObjectMapping: 0.106300 ms MarkObjects: 2.733500 ms  DeleteObjects: 0.016000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 107.324405 seconds.
+  path: Assets/Art/Character/android_boxer/08_2.png
+  artifactKey: Guid(5f348c645607b9147abba6a377489c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_boxer/08_2.png using Guid(5f348c645607b9147abba6a377489c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07de653b603dd62afcb6069753cf521a') in 0.198755 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/Art/Character/android_assistant/02_smile.png
-  artifactKey: Guid(c0692a48be7850847bfc3cad7fde03b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_smile.png using Guid(c0692a48be7850847bfc3cad7fde03b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0cc2d3072d48e45d6396deab3ad44d8') in 0.015664 seconds 
+  path: Assets/Art/Character/android_boxer/08_5.png
+  artifactKey: Guid(6049ac7341ae97d42990ca746feeb6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_boxer/08_5.png using Guid(6049ac7341ae97d42990ca746feeb6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2407fb54e1836dd7e01fe583558548f4') in 0.015074 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised_mouth2.png
-  artifactKey: Guid(dbf5b921cb55fdf4c9cd25ad8825a003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised_mouth2.png using Guid(dbf5b921cb55fdf4c9cd25ad8825a003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad726eff6954720685d3a1acd7ac94f') in 0.013803 seconds 
+  Time since last request: 47.032755 seconds.
+  path: Assets/Art/Character/android_boxer/boxer_idle.anim
+  artifactKey: Guid(d91ebd1373ad32846855a51951c7d4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_boxer/boxer_idle.anim using Guid(d91ebd1373ad32846855a51951c7d4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2543911a165ad43d085241206ad1bec2') in 0.006928 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Art/Character/android_assistant/02_mouth9.png
-  artifactKey: Guid(1b14fbf3aecc09044b58d32db8cf54e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_mouth9.png using Guid(1b14fbf3aecc09044b58d32db8cf54e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61cde4cfbe6cf96f7cf811edc70b0f6') in 0.013299 seconds 
+  Time since last request: 111.502123 seconds.
+  path: Assets/Art/Character/android_boxer/Image.controller
+  artifactKey: Guid(c5426c761f9417e4d9ce15debd52b6f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_boxer/Image.controller using Guid(c5426c761f9417e4d9ce15debd52b6f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73e364792147663b34a94fd0f7d4c84') in 0.005485 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Art/Character/android_assistant/02_idle3.png
-  artifactKey: Guid(b0521cf95d28ae3459695a130053ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_idle3.png using Guid(b0521cf95d28ae3459695a130053ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23c8650c556d9e6760bbeeca7e9e735f') in 0.013641 seconds 
+  Time since last request: 0.485111 seconds.
+  path: Assets/Art/Character/android_boxer/boxer_question.anim
+  artifactKey: Guid(ee008dff3af18dd4989cb602b2de08a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_boxer/boxer_question.anim using Guid(ee008dff3af18dd4989cb602b2de08a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ef538fc69cf32d158b5dc5816d1c6e') in 0.002661 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised.png
-  artifactKey: Guid(bdb9c7ac11faab24584b6fb3623c528f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised.png using Guid(bdb9c7ac11faab24584b6fb3623c528f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe478d56882f91c763bd761f099fcf40') in 0.014197 seconds 
+  Time since last request: 0.360898 seconds.
+  path: Assets/Art/Character/android_boxer/boxer_congrats.anim
+  artifactKey: Guid(0e79553bcb7f0a743a3146356211830b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_boxer/boxer_congrats.anim using Guid(0e79553bcb7f0a743a3146356211830b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba69aed1b34513e36a9d5548f50cb72c') in 0.003143 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised_mouth3.png
-  artifactKey: Guid(ec013ffe11ff6ad4ba38b887d70201eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised_mouth3.png using Guid(ec013ffe11ff6ad4ba38b887d70201eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7211f2c4cc2b64d90cf00da43af3c5') in 0.013152 seconds 
+  Time since last request: 94.932788 seconds.
+  path: Assets/Art/Character/android_fireman/01-3.png
+  artifactKey: Guid(b7e68c3cad592b04b81351ba1e100d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_fireman/01-3.png using Guid(b7e68c3cad592b04b81351ba1e100d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fae8f17a1f2c860ea35c577554ec4533') in 0.015213 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Character/android_assistant/02_mouth8.png
-  artifactKey: Guid(4b5f6b30f23ae2f42a745a3e48501c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_mouth8.png using Guid(4b5f6b30f23ae2f42a745a3e48501c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380da44bad8598dbc25257a85559d18a') in 0.014032 seconds 
+  Time since last request: 30.158165 seconds.
+  path: Assets/Art/Character/android_fireman/Image (3).controller
+  artifactKey: Guid(edd34a16f90aac84f911963e8a28dded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_fireman/Image (3).controller using Guid(edd34a16f90aac84f911963e8a28dded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac479f38812e8a4c3e18984ed0c707a') in 0.003590 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised_mouth1.png
-  artifactKey: Guid(a814f47e610213e4f92c331042b18681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised_mouth1.png using Guid(a814f47e610213e4f92c331042b18681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a773c8a5903b29512f6ba21d43b42239') in 0.013403 seconds 
+  Time since last request: 21.657751 seconds.
+  path: Assets/Art/Character/android_fireman/Fireman.controller
+  artifactKey: Guid(d756ffb89d6b2c141ad5fc8f42a2c195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_fireman/Fireman.controller using Guid(d756ffb89d6b2c141ad5fc8f42a2c195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e7ae8f559cd7b0ff6986a5f1d719dc') in 0.002703 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009996 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.188 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1189ms)
+		BeginReloadAssembly (174ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (913ms)
+			LoadAssemblies (138ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (236ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (404ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (283ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (33ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.29 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3899 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.6 KB). Loaded Objects now: 4436.
+Memory consumption went from 156.1 MB to 156.1 MB.
+Total: 3.331000 ms (FindLiveObjects: 0.376900 ms CreateObjectMapping: 0.105500 ms MarkObjects: 2.829600 ms  DeleteObjects: 0.017900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 70.809328 seconds.
-  path: Assets/Art/Character/android_assistant/02_idle3.png
-  artifactKey: Guid(b0521cf95d28ae3459695a130053ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_idle3.png using Guid(b0521cf95d28ae3459695a130053ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599ba629f76c98b71c40443aeb649a8f') in 0.026930 seconds 
+  Time since last request: 45.545496 seconds.
+  path: Assets/Art/Character/human_guest/06_3.png
+  artifactKey: Guid(41d5b294b1edf1644809ae9d6e8700a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_3.png using Guid(41d5b294b1edf1644809ae9d6e8700a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64dd2452dc3ab4078df8c8b6d7a973b5') in 0.059695 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 52.212185 seconds.
-  path: Assets/Art/Character/android_assistant/02_smile.png
-  artifactKey: Guid(c0692a48be7850847bfc3cad7fde03b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_smile.png using Guid(c0692a48be7850847bfc3cad7fde03b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6f73b814c326e2517750417b6d98f95') in 0.012845 seconds 
+  Time since last request: 0.000015 seconds.
+  path: Assets/Art/Character/human_guest/06_mouth10.png
+  artifactKey: Guid(abd7cdd65f5d21448a51b65f3233316b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_mouth10.png using Guid(abd7cdd65f5d21448a51b65f3233316b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d471611f305ac75c0987cc001dccfe') in 0.014332 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.006814 seconds.
-  path: Assets/Art/Character/android_assistant/02_mouth7.png
-  artifactKey: Guid(e59a024fe7280ca46a472b1e73031a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_mouth7.png using Guid(e59a024fe7280ca46a472b1e73031a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96aefc91d9540ac59d347073dc90f25b') in 0.013218 seconds 
+  Time since last request: 6.744131 seconds.
+  path: Assets/Art/Character/android_assistant/assistant.controller
+  artifactKey: Guid(3755fa7bd09639e4a9cb1693bd84b069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/assistant.controller using Guid(3755fa7bd09639e4a9cb1693bd84b069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c061dbc8f4f537efd7eecba631755d58') in 0.002882 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised_idle.png
-  artifactKey: Guid(d5181380aa7490946abe8e53d12c3d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised_idle.png using Guid(d5181380aa7490946abe8e53d12c3d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc04fb23c0827935fe71b6cf0a98493') in 0.015140 seconds 
+  Time since last request: 341.346793 seconds.
+  path: Assets/Art/Character/human_guest/Image.controller
+  artifactKey: Guid(ae4b645ed9cc4f4409157e1ed192a030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/Image.controller using Guid(ae4b645ed9cc4f4409157e1ed192a030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87b8be4fd3b163bff636008b8dcdd3e') in 0.004868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 216.910617 seconds.
+  path: Assets/Art/Character/android_painter/07_2.png
+  artifactKey: Guid(18e2c474f4f44f24e9eedd4741eeb345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_painter/07_2.png using Guid(18e2c474f4f44f24e9eedd4741eeb345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aaaa0557c0907de6fccdf6448aeb709') in 0.015341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 97.134286 seconds.
+  path: Assets/Art/Character/android_painter/07_2.png
+  artifactKey: Guid(18e2c474f4f44f24e9eedd4741eeb345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_painter/07_2.png using Guid(18e2c474f4f44f24e9eedd4741eeb345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4eb0d1379c71264420b5d19f858c9f') in 0.014630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.983449 seconds.
+  path: Assets/Art/Character/android_painter/07_2.png
+  artifactKey: Guid(18e2c474f4f44f24e9eedd4741eeb345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_painter/07_2.png using Guid(18e2c474f4f44f24e9eedd4741eeb345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154d4fd35ad6e4932d81d878ea56b422') in 0.026474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.321926 seconds.
+  path: Assets/Art/Character/android_painter/07_mouth3.png
+  artifactKey: Guid(c266c15feb8a7764d9a77e9948734f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_painter/07_mouth3.png using Guid(c266c15feb8a7764d9a77e9948734f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf4a74f245ab0a8e7a6a8a1b516038d') in 0.013962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Character/android_painter/07_mouth6.png
+  artifactKey: Guid(1765a98f74adfb8489b2016297edaf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_painter/07_mouth6.png using Guid(1765a98f74adfb8489b2016297edaf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c99884f38683a795d8b62bf78130d6c6') in 0.013482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 627.788213 seconds.
+  path: Assets/Art/Character/android_painter/07_smile.png
+  artifactKey: Guid(a867fb55c4a10c04fa44871955b52a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_painter/07_smile.png using Guid(a867fb55c4a10c04fa44871955b52a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d298ef4365d1b94d76da21d9039e649') in 0.014514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 238.394721 seconds.
+  path: Assets/Art/Character/android_police/Image (3).controller
+  artifactKey: Guid(1c6f604a4106e4049b33744d631d7f4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_police/Image (3).controller using Guid(1c6f604a4106e4049b33744d631d7f4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07965a5725c7a347af6ff651e2c9fd0') in 0.004663 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 433.123438 seconds.
+  path: Assets/Art/Character/human_guest/guest_talk2.anim
+  artifactKey: Guid(aadc1bd0c4797d346bc6eab3e7cdb02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/guest_talk2.anim using Guid(aadc1bd0c4797d346bc6eab3e7cdb02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7d51b6df3aa92c61f2560ded965acd3') in 0.003037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.986661 seconds.
+  path: Assets/Art/Character/human_guest/guest_surprised.anim
+  artifactKey: Guid(88c8371e05f76764f8f5e66ff3d62107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/guest_surprised.anim using Guid(88c8371e05f76764f8f5e66ff3d62107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '789f6ab731d0a8b8f14dbf3b3ff64660') in 0.002786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.864516 seconds.
+  path: Assets/Art/Character/human_guest/guest_idle.anim
+  artifactKey: Guid(b08c45de4765cb7419d24df381c84635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/guest_idle.anim using Guid(b08c45de4765cb7419d24df381c84635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d0c955e6c69417783e9ea4dc698fcdb') in 0.002484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.743746 seconds.
+  path: Assets/Art/Character/human_guest/Image (3).controller
+  artifactKey: Guid(bf988da2791b71c46871d62ca5d8c06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/Image (3).controller using Guid(bf988da2791b71c46871d62ca5d8c06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee800397b236be33283746e05430f5ba') in 0.002093 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009460 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.163 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1164ms)
+		BeginReloadAssembly (167ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (904ms)
+			LoadAssemblies (137ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (229ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (393ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (29ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3902 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.6 KB). Loaded Objects now: 4559.
+Memory consumption went from 159.9 MB to 159.9 MB.
+Total: 3.615800 ms (FindLiveObjects: 0.437500 ms CreateObjectMapping: 0.113800 ms MarkObjects: 3.041800 ms  DeleteObjects: 0.021300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 395.113320 seconds.
+  path: Assets/Art/Character/human_guest/06_smile.png
+  artifactKey: Guid(b085f591365c0f6429328cf844d492c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_smile.png using Guid(b085f591365c0f6429328cf844d492c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '058407c6f1371190bacb48b8b0e786bc') in 0.057144 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/Art/Character/android_assistant/02_mouth9.png
-  artifactKey: Guid(1b14fbf3aecc09044b58d32db8cf54e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_mouth9.png using Guid(1b14fbf3aecc09044b58d32db8cf54e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76fc58d1d94447669b255c1150f6eb01') in 0.033646 seconds 
+  path: Assets/Art/Character/human_guest/06_smile_mouth2.png
+  artifactKey: Guid(7614e9f948380fe4b8fb4eba78c003d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_smile_mouth2.png using Guid(7614e9f948380fe4b8fb4eba78c003d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a4160f731ecc5215cf64bee98dd8f3') in 0.014584 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Art/Character/android_assistant/02_surprised_mouth3.png
-  artifactKey: Guid(ec013ffe11ff6ad4ba38b887d70201eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Character/android_assistant/02_surprised_mouth3.png using Guid(ec013ffe11ff6ad4ba38b887d70201eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01eda59f43b4b2362e8f1719d039b430') in 0.013549 seconds 
+  Time since last request: 6.860277 seconds.
+  path: Assets/Art/Character/human_guest/06_smile.png
+  artifactKey: Guid(b085f591365c0f6429328cf844d492c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_smile.png using Guid(b085f591365c0f6429328cf844d492c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97333a6229d37d508cea7040db7b92ff') in 0.013198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Character/human_guest/06_smile_mouth2.png
+  artifactKey: Guid(7614e9f948380fe4b8fb4eba78c003d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_smile_mouth2.png using Guid(7614e9f948380fe4b8fb4eba78c003d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '205139a074cb1e21ffbbaab8237bdf09') in 0.013041 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.992017 seconds.
+  path: Assets/Art/Character/human_guest/06_smile_mouth3.png
+  artifactKey: Guid(ed4d5452acec3ce4ba9536397d3cc930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/06_smile_mouth3.png using Guid(ed4d5452acec3ce4ba9536397d3cc930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b5fb004e3b2af9514186cf02d2da30') in 0.013560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 95.378825 seconds.
+  path: Assets/Art/Character/human_guest/Image (3).controller
+  artifactKey: Guid(bf988da2791b71c46871d62ca5d8c06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/human_guest/Image (3).controller using Guid(bf988da2791b71c46871d62ca5d8c06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb65e860208bdc0e3fef399bfd67959c') in 0.005989 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010658 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.120 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1120ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (871ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (214ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (397ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (289ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (32ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.59 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3899 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.6 KB). Loaded Objects now: 4634.
+Memory consumption went from 162.1 MB to 162.0 MB.
+Total: 3.409200 ms (FindLiveObjects: 0.373900 ms CreateObjectMapping: 0.106300 ms MarkObjects: 2.904800 ms  DeleteObjects: 0.023300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009863 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Witch\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.120 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1121ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (870ms)
+			LoadAssemblies (139ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (214ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (384ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (32ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3896 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.7 KB). Loaded Objects now: 4636.
+Memory consumption went from 162.0 MB to 161.9 MB.
+Total: 4.171000 ms (FindLiveObjects: 0.619700 ms CreateObjectMapping: 0.311500 ms MarkObjects: 3.212700 ms  DeleteObjects: 0.025500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 997.531447 seconds.
+  path: Assets/Art/Character/android_assistant/0.anim
+  artifactKey: Guid(ee6db389fbedaae4b92cf1b617cfa02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/0.anim using Guid(ee6db389fbedaae4b92cf1b617cfa02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79441877c22c80c7b5676248f280b30c') in 0.019499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.709275 seconds.
+  path: Assets/Art/Character/android_assistant/README.txt
+  artifactKey: Guid(db1cd9c6725981d458b22ffe721b9980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/README.txt using Guid(db1cd9c6725981d458b22ffe721b9980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52257911b1e458919bdb14f9c739a847') in 0.013013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.772544 seconds.
+  path: Assets/Art/Character/android_assistant/assistant_smile.anim
+  artifactKey: Guid(6f07d8034a25a9845ab4110f602cd169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/assistant_smile.anim using Guid(6f07d8034a25a9845ab4110f602cd169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e1fbc60cdc1aeac957792b39e52dfd') in 0.003398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.135449 seconds.
+  path: Assets/Art/Character/android_assistant/assistant_surprised.anim
+  artifactKey: Guid(6579329d0aac63d40980ec2aac2ac423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/assistant_surprised.anim using Guid(6579329d0aac63d40980ec2aac2ac423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d019fb7999b671722020f792c3b6d7b') in 0.003369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.784927 seconds.
+  path: Assets/Art/Character/android_assistant/assistant_surprised_talk.anim
+  artifactKey: Guid(ed94770f62f504946b297d97f9f78d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/assistant_surprised_talk.anim using Guid(ed94770f62f504946b297d97f9f78d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f4e442fb0d10c49591abf43d96361d5') in 0.002926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.150900 seconds.
+  path: Assets/Art/Character/android_assistant/1.anim
+  artifactKey: Guid(9e92cced30f4fb944bc39bd8c303fced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/1.anim using Guid(9e92cced30f4fb944bc39bd8c303fced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f4c5f2b30a060213960036b9890997c') in 0.002802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.899862 seconds.
+  path: Assets/Art/Character/android_assistant/2.anim
+  artifactKey: Guid(2a908c4a844f44f48bfc31dad45577ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/2.anim using Guid(2a908c4a844f44f48bfc31dad45577ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85eb4f2d9a56f135b63aa186ffae7cdc') in 0.002873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.309698 seconds.
+  path: Assets/Art/Character/android_assistant/3.anim
+  artifactKey: Guid(fe43f3170bb3be44ea075c6949878730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/3.anim using Guid(fe43f3170bb3be44ea075c6949878730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6e3fb2fea77a0797a7c65a45f9df96c') in 0.002872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.392673 seconds.
+  path: Assets/Art/Character/android_assistant/4.anim
+  artifactKey: Guid(fcbba24b6392f64488e88c1bc18ec8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/4.anim using Guid(fcbba24b6392f64488e88c1bc18ec8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b7142e84259ee434a6d31c2bb8696b') in 0.003502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.378279 seconds.
+  path: Assets/Art/Character/android_assistant/5.anim
+  artifactKey: Guid(da657c0a2307a764286ed6312b1624ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/5.anim using Guid(da657c0a2307a764286ed6312b1624ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5062a4c41371c832198334524dbf37f2') in 0.003207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 66.084228 seconds.
+  path: Assets/Art/Character/android_assistant/6.anim
+  artifactKey: Guid(6579329d0aac63d40980ec2aac2ac423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/6.anim using Guid(6579329d0aac63d40980ec2aac2ac423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef2da2e4a2cd1901c181e37574d1d945') in 0.003036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.653128 seconds.
+  path: Assets/Art/Character/android_assistant/7.anim
+  artifactKey: Guid(ed94770f62f504946b297d97f9f78d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/7.anim using Guid(ed94770f62f504946b297d97f9f78d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '446173ab1cce248f7a6d8715354b485c') in 0.003185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.980011 seconds.
+  path: Assets/Art/Character/android_assistant/8.anim
+  artifactKey: Guid(6f07d8034a25a9845ab4110f602cd169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Character/android_assistant/8.anim using Guid(6f07d8034a25a9845ab4110f602cd169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '035cd03450b818f05b9b958d4f247872') in 0.002575 seconds 
