@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
     public static Character currentCharacter;
     public int char_id;
     public string char_name = "";
-    public int char_sprite;
+    public Sprite sprite;
     public List<int> char_breakdownID = new();
     public Dictionary<Repair, bool> breakdownList = new();
     public int breakdownCount;
@@ -15,10 +15,12 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        currentCharacter = this; 
         SetBreakDown();
     }
-
+    private void OnEnable()
+    {
+        currentCharacter = this;
+    }
     public void SetBreakDown()
     {
         for (int i = 0; i < RepairSystem.repairs.Count; i++)
