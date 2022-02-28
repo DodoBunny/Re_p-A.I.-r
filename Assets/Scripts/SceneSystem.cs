@@ -11,6 +11,8 @@ public class SceneSystem : MonoBehaviour
     public Image Fade;
     public float FadeSpeed = 0.01f;
 
+    public GameObject button;
+
     public void OnScene1()
     {
         StartCoroutine(FadeIn(1));
@@ -98,5 +100,11 @@ public class SceneSystem : MonoBehaviour
         instance = this;
         StartCoroutine(FadeOut());
     }
-
+    private void Update()
+    {
+        if (Character.currentCharacter == null)
+            button.gameObject.SetActive(false);
+        else
+            button.gameObject.SetActive(true);
+    }
 }

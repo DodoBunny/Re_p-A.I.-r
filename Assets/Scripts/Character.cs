@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public static Character currentCharacter;
+
     public int char_id;
     public string char_name = "";
     public Sprite sprite;
@@ -13,14 +14,18 @@ public class Character : MonoBehaviour
     public int breakdownCount;
     public bool isBreakdown = true;
 
+    public Animator animator;
+
     private void Start()
     {
-        SetBreakDown();
+        animator = GetComponent<Animator>();
     }
     public void SetCurrentCharacter()
     {
         currentCharacter = this;
+        SetBreakDown();
     }
+    
     public void SetBreakDown()
     {
         for (int i = 0; i < RepairSystem.repairs.Count; i++)

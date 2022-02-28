@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 public class MainSystem : MonoBehaviour
 {
+    public Dictionary<string,int> characterID = new Dictionary<string,int>();
+
     public static MainSystem instance;
     public GameObject CharPool;
     public Character[] characterData;
     public bool isEnd = true;
-    public string[] events = { "Day1", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
+    public string[] events = { "Day0", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
     private int day = 0;
     private void Awake()
     {
@@ -18,7 +20,8 @@ public class MainSystem : MonoBehaviour
     private void Start()
     {
         DialogSystem.instance.SetEvent(events[day]);
-        RemoveCharacter(0);
+        characterID.Add("조세핀", 0);
+        characterID.Add("브루스", 1);
     }
 
     public void NextEvent()
@@ -32,6 +35,11 @@ public class MainSystem : MonoBehaviour
          Instantiate(characterData[CharNum],CharPool.transform);
     }
 
+    public void SetRepairCharacter(int CharNum)
+    {
+        Character.currentCharacter = characterData[CharNum];
+    }
+
     public void RemoveCharacter(int CharNum)
     {
         Character[] characters = CharPool.GetComponentsInChildren<Character>();
@@ -40,5 +48,16 @@ public class MainSystem : MonoBehaviour
             if (characters[i].char_id == CharNum)
                 Destroy(characters[i].gameObject);
         }
+    }
+
+    public Animator GetAnimator(int CharNum)
+    {
+        Character[] characters = CharPool.GetComponentsInChildren<Character>();
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i].char_id == CharNum)
+                return characters[i].animator;
+        }
+        return null;
     }
 }

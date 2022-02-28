@@ -9,6 +9,9 @@ public class Dialog
     public string name;
     [Tooltip("대사")]
     public string context;
+
+    public float mood = 0;
+    public Vector2 eventTriger;
 }
 public class DialogEvent
 {
@@ -28,5 +31,31 @@ public class DialogEvent
     public string GetCurrentName()
     {
         return dialogs[currentLine].name;
+    }
+
+    public float GetMood()
+    {
+        return dialogs[currentLine].mood;
+    }
+    public void CheckEvent()
+    {
+        if(dialogs[currentLine].eventTriger != null)
+        {
+            int eventNum = (int)dialogs[currentLine].eventTriger.x;
+            int eventTarget = (int)dialogs[currentLine].eventTriger.y;
+
+            switch (eventNum)
+            {
+                case 1:
+                    MainSystem.instance.AddCharacter(eventTarget);
+                    break;
+                case 2:
+                    MainSystem.instance.SetRepairCharacter(eventTarget);
+                    break;
+                case 3:
+                    MainSystem.instance.RemoveCharacter(eventTarget);
+                    break;
+            }
+        }
     }
 }

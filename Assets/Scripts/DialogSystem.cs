@@ -8,6 +8,7 @@ public class DialogSystem : MonoBehaviour
 {
     public static DialogSystem instance;
     new AudioSource audio;
+    Animator animator;
     public GameObject textEndIcon;
 
     bool isTalking = false;
@@ -37,7 +38,8 @@ public class DialogSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetActiveEndIcon();
+        SetActiveEndIcon(); 
+        Anim();
     }
 
     #region UIControll
@@ -65,7 +67,21 @@ public class DialogSystem : MonoBehaviour
             logBox.SetActive(false);
         }
     }
+    void Anim()
+    {
+        if (animator == null)
+            return;
 
+        if (isTalking == true)
+            animator.SetFloat("Talk", 1);
+        else
+            animator.SetFloat("Talk", 0);
+
+
+        float mood = currentDialogEvent.GetMood();
+        animator.SetFloat("Mood", mood);
+
+    }
     void SetActiveEndIcon()
     {
         if (isTalking == true)
@@ -73,7 +89,6 @@ public class DialogSystem : MonoBehaviour
         else
             textEndIcon.SetActive(true);
     }
-
     public void UpdateDialog()
     {
         if (currentDialogEvent == null)
@@ -81,6 +96,21 @@ public class DialogSystem : MonoBehaviour
 
         if (currentDialogEvent.isTextEnd)
             return;
+
+        /////////////////
+
+        currentDialogEvent.CheckEvent();
+        int charID;
+        if(MainSystem.instance.characterID.TryGetValue(currentDialogEvent.GetCurrentName(), out charID))
+        {
+            animator = MainSystem.instance.GetAnimator(charID);
+        }
+        else
+        {
+            animator = null;
+        }
+
+        ///
 
         TalkingName = currentDialogEvent.GetCurrentName();
         string str = currentDialogEvent.GetCurrentText();
@@ -95,6 +125,7 @@ public class DialogSystem : MonoBehaviour
             return;
         }
     }
+
     public void UpdateLog()
     {
         if (currentDialogEvent.isTextEnd)
@@ -148,7 +179,19 @@ public class DialogSystem : MonoBehaviour
             Dialog dialog = new Dialog();
             dialog.name = row[1];
             dialog.context = row[2].Replace('^',',');
+            ////////////////////
+            if(row[3] != "")
+            {
+                dialog.mood = int.Parse(row[3]);
+            }
 
+
+            if(row[4] != "")
+            {
+                dialog.eventTriger = new Vector2(int.Parse(row[4]), int.Parse(row[5]));
+            }
+                
+            /////////////////////
             dialogList.Add(dialog);
         }
         DialogEvent dialogEvent = new DialogEvent();
