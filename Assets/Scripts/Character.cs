@@ -13,6 +13,8 @@ public class Character : MonoBehaviour
     public Dictionary<Repair, bool> breakdownList = new();
     public int breakdownCount;
     public bool isBreakdown = true;
+    public string text;
+    public string scanText;
 
     public Animator animator;
 

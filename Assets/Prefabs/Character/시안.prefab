@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7611581586750047398}
   - component: {fileID: 7611581586750047399}
   m_Layer: 5
-  m_Name: "\uC870\uC138\uD540"
+  m_Name: "\uC2DC\uC548"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8055f21773cffa42a178e4bb37766bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5a601c0b75b0a74ebb24fe1bc3e4ee0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 7611581586750047394}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 63af351484ad1f64288167091f73f6b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1615377940f8dcb44832e0903584eebb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,20 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d5d9642645fdd4c83cbd3d34a703d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  char_id: 0
-  char_name: "\uC870\uC138\uD540"
-  sprite: {fileID: 21300000, guid: b8055f21773cffa42a178e4bb37766bf, type: 3}
-  char_breakdownID: 0000000001000000
+  char_id: 3
+  char_name: "\uC2DC\uC548"
+  sprite: {fileID: 21300000, guid: e5a601c0b75b0a74ebb24fe1bc3e4ee0, type: 3}
+  char_breakdownID: 06000000
   breakdownCount: 0
   isBreakdown: 0
-  text: "\uCC9C\uC7AC\uC801\uC778 \uACF5\uD559\uC790 \"\uB808\uB124 K. \uB9AC\"\uAC00
-    \uAC1C\uC778\uC801\uC73C\uB85C \uC81C\uC791\uD55C \uC548\uB4DC\uB85C\uC774\uB4DC.
-    \uC548\uB4DC\uB85C\uC774\uB4DC\uC784\uC5D0\uB3C4 \uBD88\uAD6C\uD558\uACE0 \uD48D\uBD80\uD55C
-    \uAC10\uC815 \uD45C\uD604\uC744 \uAC00\uC9C0\uACE0 \uC788\uC73C\uBA70, \uD6CC\uB96D\uD55C
-    \uC870\uC218\uB85C\uC368 \uB808\uD30C\uC774\uC544\uC5D0\uC11C \uC77C\uD558\uACE0
-    \uC788\uB2E4.  \uC6B0\uB9AC \uB538 \uC798 \uCC59\uACA8\uC918! - \uB808\uB124"
-  scanText: "[\uC774\uBB3C\uC9C8 \uBC1C\uACAC] - \uAE30\uCCB4 \uB0B4\uBD80 - [\uB0B4\uBD80
-    \uCCAD\uC18C \uD544\uC694]  [\uC88C\uCE21 \uD5C8\uBC85\uC9C0 \uD30C\uCE20] -
-    \uC190\uC0C1 \uBC1C\uC0DD - [\uC190\uC0C1 \uC815\uB3C4 : 23.7% - \uC218\uB9AC
-    \uD544\uC694]"
+  text: "[\uBAA8\uB378\uBA85 : M1-LE]\\n \uB9CC\uD654 \"\uB85C\uBCF4\uBE0C\uB808\uC778\uACFC
+    \uC2A4\uD53C\uCEE4\uD5E4\uB4DC\"\uB97C \uADF8\uB9AC\uB358 \uB9CC\uD654\uAC00\uC758
+    \uB370\uC774\uD130\uB97C \uD559\uC2B5\uD558\uC5EC \uB9CC\uB4E4\uC5B4\uC9C4 \uC548\uB4DC\uB85C\uC774\uB4DC.\\n
+    \uC6D0\uC791\uC790\uC758 \uB73B\uC744 \uC774\uC5B4\uBC1B\uB294\uB2E4\uB294 \uC774\uC720\uB85C,
+    \uC548\uB4DC\uB85C\uC774\uB4DC\uC9C0\uB9CC \uC2A4\uC2A4\uB85C \uC791\uC5C5 \uC18D\uB3C4\uB97C
+    \uC81C\uD55C\uD558\uACE0 \uD544\uAE30\uAD6C\uB97C \uC0AC\uC6A9\uD558\uC5EC \uB2E4\uB978
+    \uB9CC\uD654\uAC00\uB4E4\uC758 \uC18D\uB3C4\uC5D0 \uB9DE\uCD94\uACE0 \uC788\uB2E4."
+  scanText: "[\uC548\uAD6C \uCE74\uBA54\uB77C]\\n - \uC624\uB958 \uBC1C\uC0DD\\n
+    - [RGB \uAC12\uC774 \uC720\uD6A8\uD558\uC9C0 \uC54A\uC74C]\\n"
   animator: {fileID: 0}

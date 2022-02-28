@@ -10,8 +10,7 @@ public class MainSystem : MonoBehaviour
     public GameObject CharPool;
     public Character[] characterData;
     public bool isEnd = true;
-    public string[] events = { "Day0", "Day1_A", "Day1_AA", "Day2", "Day5", "Day6", "Day7" };
-    private int day = 0;
+
     private void Awake()
     {
         instance = this;
@@ -19,15 +18,268 @@ public class MainSystem : MonoBehaviour
 
     private void Start()
     {
-        DialogSystem.instance.SetEvent(events[day]);
+        NextEvent(0);
+
         characterID.Add("조세핀", 0);
         characterID.Add("브루스", 1);
+        characterID.Add("실베스터", 2);
+        characterID.Add("시안", 3);
+        characterID.Add("불워크", 4);
+        characterID.Add("브루스2", 5);
+        characterID.Add("조나스", 6);
+        characterID.Add("실베스터2", 7);
+        characterID.Add("시안2", 8);
+        characterID.Add("마르코", 9);
+        characterID.Add("레네", 10);
+        characterID.Add("존스턴", 11);
+
+
+        Debug.Log(DialogSystem.instance.currentDialogEvent.name);
     }
 
-    public void NextEvent()
+    private int day = 0;
+    int temp = 0;
+    public void NextEvent(int repairResult)
     {
-        day++;
-        DialogSystem.instance.SetEvent(events[day]);
+        switch (day)
+        {
+            case 0:
+                Day1(repairResult);
+                break;
+            case 1:
+                Day2(repairResult);
+                break;
+            case 2:
+                Day3(repairResult);
+                break;
+            case 3:
+                Day4(repairResult);
+                break;
+            case 4:
+                Day5(repairResult);
+                break;
+            case 5:
+                Day6(repairResult);
+                break;
+            case 6:
+                Day7();
+                break;
+        }
+    }
+
+    void Day1(int result)
+    {
+        switch (temp)
+        {
+            case 0:
+                DialogSystem.instance.SetEvent("Day1");
+                temp++;
+                break;
+            case 1:
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent("Day1A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent("Day1B");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent("Day1C");
+                        break;
+                }
+                temp++;
+                break;
+            case 2:
+                string file = DialogSystem.instance.currentDialogEvent.name;
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent(file + "A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent(file + "B");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent(file + "C");
+                        break;
+                }
+                temp = 0;
+                day++;
+                break;
+        }
+    }
+
+    void Day2(int result)
+    {
+        switch (temp)
+        {
+            case 0:
+                DialogSystem.instance.SetEvent("Day2");
+                temp++;
+                break;
+            case 1:
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent("Day2A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent("Day2B");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent("Day2C");
+                        break;
+                }
+                temp = 0;
+                day++;
+                break;
+        }
+    }
+    void Day3(int result)
+    {
+        switch (temp)
+        {
+            case 0:
+                DialogSystem.instance.SetEvent("Day3");
+                temp++;
+                break;
+            case 1:
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent("Day3A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent("Day3C");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent("Day3C");
+                        break;
+                }
+                temp++;
+                break;
+            case 2:
+                string file = DialogSystem.instance.currentDialogEvent.name;
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent(file + "A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent(file + "C");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent(file + "C");
+                        break;
+                }
+                temp = 0;
+                day++;
+                break;
+        }
+    }
+
+    void Day4(int result)
+    {
+        switch (temp)
+        {
+            case 0:
+                DialogSystem.instance.SetEvent("Day4");
+                temp++;
+                break;
+            case 1:
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent("Day4A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent("Day4C");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent("Day4C");
+                        break;
+                }
+                temp = 0;
+                day++;
+                break;
+        }
+    }
+
+    void Day5(int result)
+    {
+        switch (temp)
+        {
+            case 0:
+                DialogSystem.instance.SetEvent("Day5");
+                temp++;
+                break;
+            case 1:
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent("Day5A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent("Day5C");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent("Day5C");
+                        break;
+                }
+                temp = 0;
+                day++;
+                break;
+        }
+    }
+
+
+    void Day6(int result)
+    {
+        switch (temp)
+        {
+            case 0:
+                DialogSystem.instance.SetEvent("Day6");
+                temp++;
+                break;
+            case 1:
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent("Day6A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent("Day6B");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent("Day6C");
+                        break;
+                }
+                temp++;
+                break;
+            case 2:
+                string file = DialogSystem.instance.currentDialogEvent.name;
+                switch (result)
+                {
+                    case 0:
+                        DialogSystem.instance.SetEvent(file + "A");
+                        break;
+                    case 1:
+                        DialogSystem.instance.SetEvent(file + "B");
+                        break;
+                    case 2:
+                        DialogSystem.instance.SetEvent(file + "C");
+                        break;
+                }
+                temp = 0;
+                day++;
+                break;
+        }
+    }
+
+    void Day7()
+    {
+        DialogSystem.instance.SetEvent("Day7");
     }
 
     public void AddCharacter(int CharNum)
@@ -38,11 +290,10 @@ public class MainSystem : MonoBehaviour
     public void SetRepairCharacter(int CharNum)
     {
         Character.currentCharacter = characterData[CharNum];
-    }
+        Character.currentCharacter.SetCurrentCharacter();
 
-    public void RemoveCharacter(int CharNum)
-    {
         Character[] characters = CharPool.GetComponentsInChildren<Character>();
+        
         for (int i = 0; i < characters.Length; i++)
         {
             if (characters[i].char_id == CharNum)

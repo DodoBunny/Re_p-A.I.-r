@@ -7,6 +7,7 @@ public class RepairSystem : MonoBehaviour
 {
     public GameObject repairUI_contentObj;
     public TextMeshProUGUI repairUI_LogText;
+    public TextMeshProUGUI repairUI_ScanText;
 
     [SerializeField]
     GameObject rePairUI_ButtonObj;
@@ -55,12 +56,13 @@ public class RepairSystem : MonoBehaviour
     public void RepairStart()
     {
         bool isRepairSuccess = true;
+        int breakdownCount = Character.currentCharacter.breakdownCount;
         for (int i = 0; i < repairs.Count; i++)
         {
             Repair repair = repairs[i];
             if (UI_Repairs[repair] && Character.currentCharacter.breakdownList[repair])
             {
-                Debug.Log(repairs[i].r_name + " 수리");
+                breakdownCount--;
             }else if (!UI_Repairs[repair] && Character.currentCharacter.breakdownList[repair])
             {
                 Debug.Log(repairs[i].r_name + " 수리 미완료");
@@ -76,16 +78,27 @@ public class RepairSystem : MonoBehaviour
 
         if (isRepairSuccess)
         {
-            Debug.Log("수리 성공!");
+            //성공
             Character.currentCharacter.isBreakdown = false;
-            MainSystem.instance.NextEvent();
+            MainSystem.instance.NextEvent(0);
             SceneSystem.instance.OnScene1();
         }
         else
         {
-            Debug.Log("수리 실패!");
+            if (breakdownCount == Character.currentCharacter.breakdownCount)
+            {
+                //대 실패
+                MainSystem.instance.NextEvent(2);
+            }
+            else
+            {
+                //부분 실패
+                MainSystem.instance.NextEvent(1);
+            }
             SoundSystem.instance.PlaySoundEffect(5);
+            SceneSystem.instance.OnScene1();
         }
+        Character.currentCharacter = null;
     }
 
 

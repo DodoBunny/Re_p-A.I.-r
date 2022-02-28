@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7611581586750047398}
   - component: {fileID: 7611581586750047399}
   m_Layer: 5
-  m_Name: "\uC870\uC138\uD540"
+  m_Name: "\uC2E4\uBCA0\uC2A4\uD130"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8055f21773cffa42a178e4bb37766bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e4c1de88be2986478a3557da51248f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 7611581586750047394}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 63af351484ad1f64288167091f73f6b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: bec32e7c26f1abd4c8f7680acaf2623e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,20 +110,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d5d9642645fdd4c83cbd3d34a703d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  char_id: 0
-  char_name: "\uC870\uC138\uD540"
-  sprite: {fileID: 21300000, guid: b8055f21773cffa42a178e4bb37766bf, type: 3}
-  char_breakdownID: 0000000001000000
+  char_id: 2
+  char_name: "\uC2E4\uBCA0\uC2A4\uD130"
+  sprite: {fileID: 21300000, guid: 7e4c1de88be2986478a3557da51248f9, type: 3}
+  char_breakdownID: 010000000200000003000000
   breakdownCount: 0
   isBreakdown: 0
-  text: "\uCC9C\uC7AC\uC801\uC778 \uACF5\uD559\uC790 \"\uB808\uB124 K. \uB9AC\"\uAC00
-    \uAC1C\uC778\uC801\uC73C\uB85C \uC81C\uC791\uD55C \uC548\uB4DC\uB85C\uC774\uB4DC.
-    \uC548\uB4DC\uB85C\uC774\uB4DC\uC784\uC5D0\uB3C4 \uBD88\uAD6C\uD558\uACE0 \uD48D\uBD80\uD55C
-    \uAC10\uC815 \uD45C\uD604\uC744 \uAC00\uC9C0\uACE0 \uC788\uC73C\uBA70, \uD6CC\uB96D\uD55C
-    \uC870\uC218\uB85C\uC368 \uB808\uD30C\uC774\uC544\uC5D0\uC11C \uC77C\uD558\uACE0
-    \uC788\uB2E4.  \uC6B0\uB9AC \uB538 \uC798 \uCC59\uACA8\uC918! - \uB808\uB124"
-  scanText: "[\uC774\uBB3C\uC9C8 \uBC1C\uACAC] - \uAE30\uCCB4 \uB0B4\uBD80 - [\uB0B4\uBD80
-    \uCCAD\uC18C \uD544\uC694]  [\uC88C\uCE21 \uD5C8\uBC85\uC9C0 \uD30C\uCE20] -
-    \uC190\uC0C1 \uBC1C\uC0DD - [\uC190\uC0C1 \uC815\uB3C4 : 23.7% - \uC218\uB9AC
-    \uD544\uC694]"
+  text: "[\uBAA8\uB378\uBA85 : MSR-76] \uCF00\uC778 \uD5EC\uC2A4 \uD074\uB7FD\uC758
+    \uD2B8\uB808\uC774\uB108 \uC548\uB4DC\uB85C\uC774\uB4DC. \uBCF8\uC778\uC740 \"\uB9CC\uB2A5
+    \uC2A4\uD30C\uB9C1 \uBA38\uC2E0\"\uC774\uB77C\uACE0 \uC790\uCE6D\uD55C\uB2E4.
+    \uBB34\uC220\uC744 \uC704\uD55C \uC2A4\uD30C\uB9C1 \uC7A5\uBE44\uC640 \uBCF4\uD638\uAD6C\uB97C
+    \uD0D1\uC7AC\uD558\uACE0 \uC788\uC5B4, \uB300\uBD80\uBD84\uC758 \uD2B8\uB808\uC774\uB2DD\uC744
+    \uD6A8\uACFC\uC801\uC73C\uB85C \uAC00\uB974\uCE60 \uC218 \uC788\uB2E4. MSR \uC548\uB4DC\uB85C\uC774\uB4DC
+    \uC81C\uD488\uAD70\uC740 \uD2B9\uC720\uC758 \uBE60\uB974\uACE0 \uD65C\uAE30\uCC2C
+    TTS\uAC00 \uD2B9\uC9D5\uC73C\uB85C, \uB300\uC911\uC5D0\uAC8C \uD638\uBD88\uD638\uAC00
+    \uAC08\uB9AC\uB294 \uB4EF \uD558\uB2E4."
+  scanText: "[\uC548\uAD6C \uCE74\uBA54\uB77C\uC5D0 \uC190\uC0C1 \uBC1C\uC0DD] -
+    [\uC190\uC0C1 \uC815\uB3C4 : 43.7% - \uC218\uB9AC \uD544\uC694]  [\uAE30\uCCB4
+    \uB0B4\uBCBD\uC5D0 \uC190\uC0C1 \uBC1C\uC0DD] - [\uC190\uC0C1 \uC815\uB3C4 :
+    35.2%  \uB0B4\uBD80 \uC218\uB9AC \uD544\uC694]  [\uBC1C \uD30C\uCE20\uC5D0 \uC190\uC0C1
+    \uBC1C\uC0DD] - [\uC190\uC0C1 \uC815\uB3C4 : 86.3% - \uAD50\uCCB4 \uD544\uC694]"
   animator: {fileID: 0}
