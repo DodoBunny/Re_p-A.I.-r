@@ -55,7 +55,7 @@ public class RepairSystem : MonoBehaviour
 
     public void RepairStart()
     {
-        bool isRepairSuccess = true;
+        bool isRepairSuccess;
         int breakdownCount = Character.currentCharacter.breakdownCount;
         for (int i = 0; i < repairs.Count; i++)
         {
@@ -63,18 +63,13 @@ public class RepairSystem : MonoBehaviour
             if (UI_Repairs[repair] && Character.currentCharacter.breakdownList[repair])
             {
                 breakdownCount--;
-            }else if (!UI_Repairs[repair] && Character.currentCharacter.breakdownList[repair])
-            {
-                Debug.Log(repairs[i].r_name + " 수리 미완료");
-                isRepairSuccess = false;
-                break;
-            }else if(UI_Repairs[repair] && !Character.currentCharacter.breakdownList[repair])
-            {
-                Debug.Log(repairs[i].r_name + " 수리 할 필요 없음");
-                isRepairSuccess = false;
-                break;
             }
         }
+
+        if (breakdownCount == 0)
+            isRepairSuccess = true;
+        else
+            isRepairSuccess = false;
 
         if (isRepairSuccess)
         {

@@ -337,6 +337,7 @@ public class MainSystem : MonoBehaviour
     public Animator GetAnimator(int CharNum)
     {
         Character[] characters = CharPool.GetComponentsInChildren<Character>();
+
         for (int i = 0; i < characters.Length; i++)
         {
             if (characters[i].char_id == CharNum)

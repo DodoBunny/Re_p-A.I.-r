@@ -101,6 +101,7 @@ public class DialogSystem : MonoBehaviour
 
         currentDialogEvent.CheckEvent();
         int charID;
+
         if(MainSystem.instance.characterID.TryGetValue(currentDialogEvent.GetCurrentName(), out charID))
         {
             animator = MainSystem.instance.GetAnimator(charID);
