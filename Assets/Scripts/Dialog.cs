@@ -55,6 +55,9 @@ public class DialogEvent
                 case 3:
                     MainSystem.instance.DisappearCharacter(eventTarget);
                     break;
+                case 4:
+                    MainSystem.instance.NextEvent(0);
+                    break;
             }
         }
     }

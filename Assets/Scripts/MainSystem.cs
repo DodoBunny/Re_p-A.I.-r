@@ -115,6 +115,8 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                ClearCharacter();
+                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day2");
                 temp++;
                 break;
@@ -141,6 +143,8 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                ClearCharacter();
+                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day3");
                 temp++;
                 break;
@@ -184,6 +188,8 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                ClearCharacter();
+                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day4");
                 temp++;
                 break;
@@ -211,6 +217,8 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                ClearCharacter();
+                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day5");
                 temp++;
                 break;
@@ -239,6 +247,8 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                ClearCharacter();
+                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day6");
                 temp++;
                 break;
@@ -279,6 +289,8 @@ public class MainSystem : MonoBehaviour
 
     void Day7()
     {
+        ClearCharacter();
+        SceneSystem.instance.OnScene1();
         DialogSystem.instance.SetEvent("Day7");
     }
 
@@ -309,6 +321,16 @@ public class MainSystem : MonoBehaviour
         {
             if (characters[i].char_id == CharNum)
                 Destroy(characters[i].gameObject);
+        }
+    }
+
+    public void ClearCharacter()
+    {
+        Character[] characters = CharPool.GetComponentsInChildren<Character>();
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+             Destroy(characters[i].gameObject);
         }
     }
 
