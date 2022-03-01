@@ -52,6 +52,9 @@ public class DialogEvent
                 case 2:
                     MainSystem.instance.SetRepairCharacter(eventTarget);
                     break;
+                case 3:
+                    MainSystem.instance.DisappearCharacter(eventTarget);
+                    break;
             }
         }
     }

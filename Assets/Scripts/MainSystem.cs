@@ -301,6 +301,17 @@ public class MainSystem : MonoBehaviour
         }
     }
 
+    public void DisappearCharacter(int CharNum)
+    {
+        Character[] characters = CharPool.GetComponentsInChildren<Character>();
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i].char_id == CharNum)
+                Destroy(characters[i].gameObject);
+        }
+    }
+
     public Animator GetAnimator(int CharNum)
     {
         Character[] characters = CharPool.GetComponentsInChildren<Character>();
