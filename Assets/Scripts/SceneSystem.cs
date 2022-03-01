@@ -28,6 +28,7 @@ public class SceneSystem : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public bool isLobby = false;
     public void GameStart()
     {
         StartCoroutine(FadeIn());
@@ -102,6 +103,8 @@ public class SceneSystem : MonoBehaviour
     }
     private void Update()
     {
+        if (isLobby == true)
+            return;
         if (Character.currentCharacter == null)
             button.gameObject.SetActive(false);
         else

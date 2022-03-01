@@ -105,6 +105,11 @@ public class DialogSystem : MonoBehaviour
         if(MainSystem.instance.characterID.TryGetValue(currentDialogEvent.GetCurrentName(), out charID))
         {
             animator = MainSystem.instance.GetAnimator(charID);
+            if(animator == null)
+            {
+                MainSystem.instance.characterID.TryGetValue(currentDialogEvent.GetCurrentName() + "2", out charID);
+                animator = MainSystem.instance.GetAnimator(charID);
+            }
         }
         else
         {
