@@ -2286,6 +2286,8 @@ MonoBehaviour:
   - {fileID: 7611581586750047399, guid: 2b831ae03c212e346a9244a2d85cc0b7, type: 3}
   - {fileID: 7611581586750047399, guid: a4396784e4b4a9442a1a162d043672d2, type: 3}
   isEnd: 1
+  day: 1
+  temp: 0
 --- !u!1 &761889813
 GameObject:
   m_ObjectHideFlags: 0

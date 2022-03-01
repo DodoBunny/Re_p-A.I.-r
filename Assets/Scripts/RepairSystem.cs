@@ -82,6 +82,7 @@ public class RepairSystem : MonoBehaviour
             Character.currentCharacter.isBreakdown = false;
             MainSystem.instance.NextEvent(0);
             SceneSystem.instance.OnScene1();
+            SoundSystem.instance.PlaySoundEffect(5);
         }
         else
         {
@@ -97,8 +98,8 @@ public class RepairSystem : MonoBehaviour
             }
             SoundSystem.instance.PlaySoundEffect(5);
             SceneSystem.instance.OnScene1();
-            DialogSystem.instance.UpdateDialog();
         }
+        DialogSystem.instance.UpdateDialog();
         Character.currentCharacter = null;
     }
 

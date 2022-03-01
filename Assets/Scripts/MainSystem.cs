@@ -32,13 +32,13 @@ public class MainSystem : MonoBehaviour
         characterID.Add("마르코", 9);
         characterID.Add("레네", 10);
         characterID.Add("존스턴", 11);
-
-
-        Debug.Log(DialogSystem.instance.currentDialogEvent.name);
     }
 
+    [SerializeField]
     private int day = 0;
+    [SerializeField]
     int temp = 0;
+
     public void NextEvent(int repairResult)
     {
         switch (day)

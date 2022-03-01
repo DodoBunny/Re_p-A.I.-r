@@ -30,6 +30,7 @@ public class Character : MonoBehaviour
     
     public void SetBreakDown()
     {
+        breakdownCount = 0;
         for (int i = 0; i < RepairSystem.repairs.Count; i++)
         {
             if (char_breakdownID.Contains(i))
