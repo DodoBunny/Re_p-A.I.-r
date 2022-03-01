@@ -1936,3 +1936,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2149.677136 seconds.
+  path: Assets/Art/lobby_bac.png
+  artifactKey: Guid(fd1ef872500e8844c958f126a330626e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/lobby_bac.png using Guid(fd1ef872500e8844c958f126a330626e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35623b88803f71b594f0724022e4d11e') in 0.129612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/lobby_light.png
+  artifactKey: Guid(a3c89382972f8e7459bcb5acc16154a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/lobby_light.png using Guid(a3c89382972f8e7459bcb5acc16154a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ffe9d819cea17a1ff8d40afc665a9e8') in 0.023586 seconds 
