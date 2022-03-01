@@ -2993,6 +2993,8 @@ MonoBehaviour:
   characterData:
   - {fileID: 1055530890324234493, guid: 85a873dec9a1dea479ba6e0c355148e2, type: 3}
   isEnd: 1
+  day: 0
+  temp: 0
 --- !u!1 &761889813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,8 +3117,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5041,10 +5043,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545131122}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 545131126}
+        m_TargetAssemblyTypeName: ExitButtonScript, Assembly-CSharp
+        m_MethodName: ExitMenuOn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
