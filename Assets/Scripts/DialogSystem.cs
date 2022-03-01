@@ -208,6 +208,5 @@ public class DialogSystem : MonoBehaviour
         ResetLog();
         DialogEvent _event = Parse(_CSVFileName);
         currentDialogEvent = _event;
-        UpdateDialog();
     }
 }

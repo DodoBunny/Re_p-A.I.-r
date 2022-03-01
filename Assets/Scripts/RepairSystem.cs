@@ -97,6 +97,7 @@ public class RepairSystem : MonoBehaviour
             }
             SoundSystem.instance.PlaySoundEffect(5);
             SceneSystem.instance.OnScene1();
+            DialogSystem.instance.UpdateDialog();
         }
         Character.currentCharacter = null;
     }

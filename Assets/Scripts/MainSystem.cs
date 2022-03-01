@@ -19,7 +19,7 @@ public class MainSystem : MonoBehaviour
     private void Start()
     {
         NextEvent(0);
-
+        DialogSystem.instance.UpdateDialog();
         characterID.Add("조세핀", 0);
         characterID.Add("브루스", 1);
         characterID.Add("실베스터", 2);
