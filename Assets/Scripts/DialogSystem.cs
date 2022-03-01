@@ -184,8 +184,6 @@ public class DialogSystem : MonoBehaviour
             {
                 dialog.mood = int.Parse(row[3]);
             }
-
-
             if(row[4] != "")
             {
                 dialog.eventTriger = new Vector2(int.Parse(row[4]), int.Parse(row[5]));
