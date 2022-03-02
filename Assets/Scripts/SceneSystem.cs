@@ -31,6 +31,16 @@ public class SceneSystem : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void OnLobbyScene()
+    {
+        Invoke("LoadScene", 3f);
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public bool isLobby = false;
     public void GameStart()
     {

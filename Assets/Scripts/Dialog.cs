@@ -61,6 +61,10 @@ public class DialogEvent
                 case 5:
                     MainSystem.instance.GameEnding();
                     break;
+                case 6:
+                    SoundSystem.instance.PlaySoundEffect(6);
+                    SceneSystem.instance.OnLobbyScene();
+                    break;
             }
         }
     }

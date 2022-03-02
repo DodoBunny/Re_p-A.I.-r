@@ -2675,7 +2675,7 @@ MonoBehaviour:
   Wday: {fileID: 21300000, guid: e5227326366221842ab4abd5a043fddd, type: 3}
   Wnoon: {fileID: 21300000, guid: ef6f5dc8d02d51149bc292d377ae2868, type: 3}
   Wnight: {fileID: 21300000, guid: 39f164b9c0b3a0641b70a4804b64680e, type: 3}
-  day: 6
+  day: 0
   temp: 0
   endingImg: {fileID: 2132479224}
 --- !u!1 &761889813
@@ -2998,6 +2998,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 16f4f9907c99697428d8219b4887c102, type: 3}
   - {fileID: 8300000, guid: d9167ecba4562684b8eacf2fc44d2552, type: 3}
   - {fileID: 8300000, guid: 1644fea3a15847a4abb7591556efeb64, type: 3}
+  - {fileID: 8300000, guid: dd2758707235a7842ae48d5059b7e364, type: 3}
 --- !u!1 &841610780
 GameObject:
   m_ObjectHideFlags: 0
