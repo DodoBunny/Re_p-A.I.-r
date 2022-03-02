@@ -2675,7 +2675,7 @@ MonoBehaviour:
   Wday: {fileID: 21300000, guid: e5227326366221842ab4abd5a043fddd, type: 3}
   Wnoon: {fileID: 21300000, guid: ef6f5dc8d02d51149bc292d377ae2868, type: 3}
   Wnight: {fileID: 21300000, guid: 39f164b9c0b3a0641b70a4804b64680e, type: 3}
-  day: 0
+  day: 6
   temp: 0
   endingImg: {fileID: 2132479224}
 --- !u!1 &761889813
