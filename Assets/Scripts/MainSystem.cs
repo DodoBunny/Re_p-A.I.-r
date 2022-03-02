@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class MainSystem : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class MainSystem : MonoBehaviour
     public GameObject CharPool;
     public Character[] characterData;
     public bool isEnd = true;
-
+    public GameObject WindowBackground;
+    public Sprite Wday, Wnoon, Wnight;
     private void Awake()
     {
         instance = this;
+        
     }
 
     private void Start()
@@ -72,10 +75,12 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                BGChange(1);
                 DialogSystem.instance.SetEvent("Day1");
                 temp++;
                 break;
             case 1:
+                BGChange(2);
                 switch (result)
                 {
                     case 0:
@@ -91,6 +96,7 @@ public class MainSystem : MonoBehaviour
                 temp++;
                 break;
             case 2:
+                BGChange(3);
                 string file = DialogSystem.instance.currentDialogEvent.name;
                 switch (result)
                 {
@@ -115,12 +121,14 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                BGChange(1);
                 ClearCharacter();
                 SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day2");
                 temp++;
                 break;
             case 1:
+                BGChange(3);
                 switch (result)
                 {
                     case 0:
@@ -143,12 +151,14 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                BGChange(1);
                 ClearCharacter();
                 SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day3");
                 temp++;
                 break;
             case 1:
+                BGChange(2);
                 switch (result)
                 {
                     case 0:
@@ -164,6 +174,7 @@ public class MainSystem : MonoBehaviour
                 temp++;
                 break;
             case 2:
+                BGChange(3);
                 string file = DialogSystem.instance.currentDialogEvent.name;
                 switch (result)
                 {
@@ -188,12 +199,14 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                BGChange(1);
                 ClearCharacter();
                 SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day4");
                 temp++;
                 break;
             case 1:
+                BGChange(3);
                 switch (result)
                 {
                     case 0:
@@ -217,12 +230,14 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                BGChange(1);
                 ClearCharacter();
                 SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day5");
                 temp++;
                 break;
             case 1:
+                BGChange(3);
                 switch (result)
                 {
                     case 0:
@@ -247,12 +262,14 @@ public class MainSystem : MonoBehaviour
         switch (temp)
         {
             case 0:
+                BGChange(1);
                 ClearCharacter();
                 SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day6");
                 temp++;
                 break;
             case 1:
+                BGChange(2);
                 switch (result)
                 {
                     case 0:
@@ -268,6 +285,7 @@ public class MainSystem : MonoBehaviour
                 temp++;
                 break;
             case 2:
+                BGChange(3);
                 string file = DialogSystem.instance.currentDialogEvent.name;
                 switch (result)
                 {
@@ -289,6 +307,7 @@ public class MainSystem : MonoBehaviour
 
     void Day7()
     {
+        BGChange(3);
         ClearCharacter();
         SceneSystem.instance.OnScene1();
         DialogSystem.instance.SetEvent("Day7");
@@ -346,5 +365,18 @@ public class MainSystem : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void BGChange(int t) {
+        if (t == 1) {
+            WindowBackground.GetComponent<Image>().sprite  = Wday;
+        }
+        else if (t == 2) {
+            WindowBackground.GetComponent<Image>().sprite = Wnoon;
+        }
+        else {
+            WindowBackground.GetComponent<Image>().sprite = Wnight;
+        }
+        
     }
 }
