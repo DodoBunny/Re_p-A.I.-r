@@ -123,7 +123,6 @@ public class MainSystem : MonoBehaviour
             case 0:
                 BGChange(1);
                 ClearCharacter();
-                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day2");
                 temp++;
                 break;
@@ -153,7 +152,6 @@ public class MainSystem : MonoBehaviour
             case 0:
                 BGChange(1);
                 ClearCharacter();
-                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day3");
                 temp++;
                 break;
@@ -201,7 +199,6 @@ public class MainSystem : MonoBehaviour
             case 0:
                 BGChange(1);
                 ClearCharacter();
-                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day4");
                 temp++;
                 break;
@@ -232,7 +229,6 @@ public class MainSystem : MonoBehaviour
             case 0:
                 BGChange(1);
                 ClearCharacter();
-                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day5");
                 temp++;
                 break;
@@ -264,7 +260,6 @@ public class MainSystem : MonoBehaviour
             case 0:
                 BGChange(1);
                 ClearCharacter();
-                SceneSystem.instance.OnScene1();
                 DialogSystem.instance.SetEvent("Day6");
                 temp++;
                 break;
@@ -309,7 +304,6 @@ public class MainSystem : MonoBehaviour
     {
         BGChange(3);
         ClearCharacter();
-        SceneSystem.instance.OnScene1();
         DialogSystem.instance.SetEvent("Day7");
     }
 
@@ -378,5 +372,10 @@ public class MainSystem : MonoBehaviour
             WindowBackground.GetComponent<Image>().sprite = Wnight;
         }
         
+    }
+    public GameObject endingImg;
+    public void GameEnding()
+    {
+        endingImg.SetActive(true);
     }
 }

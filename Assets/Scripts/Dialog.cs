@@ -56,7 +56,10 @@ public class DialogEvent
                     MainSystem.instance.DisappearCharacter(eventTarget);
                     break;
                 case 4:
-                    MainSystem.instance.NextEvent(0);
+                    SceneSystem.instance.OnNextDay();
+                    break;
+                case 5:
+                    MainSystem.instance.GameEnding();
                     break;
             }
         }
