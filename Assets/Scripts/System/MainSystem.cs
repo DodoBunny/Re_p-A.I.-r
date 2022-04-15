@@ -15,8 +15,12 @@ public class MainSystem : MonoBehaviour
     public Sprite Wday, Wnoon, Wnight;
     private void Awake()
     {
-        instance = this;
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+            Destroy(this);
     }
 
     private void Start()

@@ -12,6 +12,29 @@ public class SceneSystem : MonoBehaviour
     public float FadeSpeed = 0.01f;
 
     public GameObject button;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+            Destroy(this);
+
+        StartCoroutine(FadeOut());
+    }
+    private void Update()
+    {
+        if (isLobby == true)
+            return;
+        if (Character.currentCharacter == null)
+            button.gameObject.SetActive(false);
+        else
+            button.gameObject.SetActive(true);
+    }
+
+
     public void OnNextDay()
     {
         StartCoroutine(NextDay());
@@ -134,18 +157,5 @@ public class SceneSystem : MonoBehaviour
 
         Fade.gameObject.SetActive(false);
     }
-    private void Awake()
-    {
-        instance = this;
-        StartCoroutine(FadeOut());
-    }
-    private void Update()
-    {
-        if (isLobby == true)
-            return;
-        if (Character.currentCharacter == null)
-            button.gameObject.SetActive(false);
-        else
-            button.gameObject.SetActive(true);
-    }
+
 }

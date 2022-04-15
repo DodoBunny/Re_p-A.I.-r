@@ -13,7 +13,12 @@ public class SoundSystem : MonoBehaviour
     private void Awake()
     {
         audio = GetComponent<AudioSource>();
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+            Destroy(this);
     }
 
     public void PlaySoundEffect(int i)

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-[System.Serializable]
 public class Dialog
 {
     [Tooltip("캐릭터 이름")]
@@ -10,7 +8,7 @@ public class Dialog
     [Tooltip("대사")]
     public string context;
 
-    public float mood = 0;
+    public int mood = 0;
     public Vector2 eventTriger;
 }
 public class DialogEvent
